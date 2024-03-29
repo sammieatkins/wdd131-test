@@ -11,9 +11,7 @@ function renderTasks(tasks) {
     // loop through the tasks array. 
     tasks.forEach((task) => {
       // for each of them we need to add the HTML markup for a todo.
-      list.innerHTML += `
-        <li ${task.completed ? 'class="strike"' : ""}>
-          <p>${task.detail}</p>
+      list.innerHTML += `<li ${task.completed ? 'class="strike"' : ""}><p>${task.detail}</p>
           <div>
             <span data-function="delete">❎</span>
             <span data-function="complete">✅</span>
