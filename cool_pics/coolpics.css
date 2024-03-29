@@ -1,0 +1,49 @@
+/* 
+
+If you want to match the fonts in the mockup you can use Mooli for the headlines (@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");), and Arial, Helvetica,sans-serif for the rest.
+
+It would be good to add a rule to make our images responsive. We never want an image to be bigger than the space it has available. Something like the following is common:
+
+img {
+	max-width: 100%;
+}
+You can use the provided image norris-sm.jpeg for the gallery. The design calls for square images, but the provided one is not square! You can set the height and width of the image to be 250px. You will notice that the image becomes distorted however. We don't want this...we would rather have a crop. You can get that by adding the folllowing rule to your CSS for the image: object-fit: cover;
+
+The "Menu" you see will eventually be used as a button to hide and show the navigation links on mobile. In preparation for that make it a button element...then you will need to use CSS to make it look not like a button.
+
+If you want to use your own colors feel free, otherwise continue for the colors used in the mockup. */
+
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: var(--primary-color);
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-light);
+        padding: 10px;
+    }
+    body {
+        font-family: var(--primary-font);
+        font-size: 1.2em;
+    }
+    main {
+        background-color: var(--text-light);
+        padding: 1px 0;
+    }
+}
