@@ -24,26 +24,38 @@ If you want to use your own colors feel free, otherwise continue for the colors 
     --primary-font: Arial, Helvetica,sans-serif;
     --secondary-font: Mooli, san-serif;
 }
+#menuButton {
+    display: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-light);
+    padding: 10px;
+}
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+main {
+    background-color: var(--text-light);
+    padding: 1px 0;
+}
+.hide {
+    display: none;
+}
+#menuButton {
+    display: block;
+}
 
-@media screen and (max-width: 500px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--primary-color);
-        text-align: center;
-    }
-    nav {
-        display: flex;
-        flex-direction: column;
-        color: var(--text-light);
-        padding: 10px;
-    }
-    body {
-        font-family: var(--primary-font);
-        font-size: 1.2em;
-    }
-    main {
-        background-color: var(--text-light);
-        padding: 1px 0;
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
     }
 }
