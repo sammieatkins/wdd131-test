@@ -42,12 +42,13 @@ function viewHandler(event) {
     let newPath = filePathParts[0] + "-full.jpeg";
     
 	// insert the viewerTemplate into the top of the body element
-	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    
+    let element = document.querySelector("body");
+	element.insertAdjacentHTML("afterbegin", viewerTemplate(newPath, clickedElement.getAttribute("alt")));
     
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
-    
+    document.querySelector(".close-viewer").addEventListener("click", closeViewer);
 }
 function closeViewer() {
-    
+    let viewer = document.querySelector(".viewer");
+    viewer.remove();
 }
