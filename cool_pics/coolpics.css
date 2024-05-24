@@ -16,71 +16,78 @@ If you want to use your own colors feel free, otherwise continue for the colors 
 @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
 
 :root {
-    --primary-color: #52489c;
-    --secondary-color: #59c3c3;
-    --accent-color: #f45b69;
-    --text-dark: #333;
-    --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: Mooli, san-serif;
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, san-serif;
+}
+* {
+  box-sizing: border-box;
 }
 #menuButton {
-    display: none;
+  display: none;
 }
 body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary-color);
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  text-align: center;
 }
 nav {
-    display: flex;
-    flex-direction: column;
-    color: var(--text-light);
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-light);
+  padding: 10px;
 }
 body {
-    font-family: var(--primary-font);
-    font-size: 1.2em;
+  font-family: var(--primary-font);
+  font-size: 1.2em;
 }
 main {
-    background-color: var(--text-light);
-    padding: 1px 0;
+  background-color: var(--text-light);
+  padding: 1px 0;
 }
 .hide {
-    display: none;
+  display: none;
 }
 #menuButton {
-    display: block;
+  display: block;
 }
 .viewer {
-    position: fixed;
-    top:0;left:0;bottom:0;right:0;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  display: grid;
+  justify-content: center;
+  padding: 30px;
 }
 .viewer img {
     max-width: 100%;
+    max-height: 80vh;
     grid-row: 2/3;
-    margin: auto;
+    grid-column: 1/3;
+    padding: 30px;
 }
-/* make .viewer span go to top right */
 .viewer span {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    justify-self: end;
-    padding: 10px;
-    cursor: pointer;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  justify-self: end;
+  cursor: pointer;
 }
-
 @media screen and (min-width: 700px) {
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-    .viewer {
-        max-width: 80%;
-        margin: auto;
-        padding: 10px;
-    }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .viewer {
+    max-width: 80%;
+    margin: auto;
+    padding: 10px;
+  }
 }
